@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="526.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SuperMarketController">
+   <children>
+      <HBox layoutY="3.0" prefHeight="37.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label prefHeight="39.0" prefWidth="358.0" text="EAZYLINK SUPERMARKET" textFill="#100736">
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="6.0" layoutY="43.0" prefHeight="457.0" prefWidth="515.0" style="-fx-background-color: #a0bb9c;">
+         <children>
+            <AnchorPane layoutX="22.0" layoutY="49.0" prefHeight="360.0" prefWidth="471.0" AnchorPane.topAnchor="49.0">
+               <children>
+                  <GridPane layoutX="9.0" layoutY="152.0" prefHeight="200.0" prefWidth="454.0" style="-fx-background-color: white;">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="25.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.0" minWidth="10.0" prefWidth="202.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="131.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="201.0" text="ITEMS SELECT" GridPane.columnIndex="1" />
+                        <Label prefHeight="31.0" prefWidth="151.0" text="QUANTITY" GridPane.columnIndex="2" />
+                        <Label prefHeight="35.0" prefWidth="169.0" text="PRICE" GridPane.columnIndex="3" />
+                        <Label fx:id="label_item1" prefHeight="34.0" prefWidth="204.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="label_quantity1" prefHeight="33.0" prefWidth="156.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label fx:id="label_price1" prefHeight="37.0" prefWidth="161.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label fx:id="label_item2" prefHeight="27.0" prefWidth="205.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="label_quantity2" prefHeight="37.0" prefWidth="155.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label fx:id="label_price2" prefHeight="34.0" prefWidth="164.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label fx:id="label_item3" prefHeight="31.0" prefWidth="202.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="label_quantity3" prefHeight="34.0" prefWidth="156.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Label fx:id="label_price3" prefHeight="31.0" prefWidth="156.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label fx:id="label_item4" prefHeight="46.0" prefWidth="209.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="label_quantity4" prefHeight="40.0" prefWidth="157.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Label fx:id="label_price4" prefHeight="36.0" prefWidth="159.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <Label fx:id="label_item5" prefHeight="46.0" prefWidth="206.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label fx:id="label_quantity5" prefHeight="31.0" prefWidth="157.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <Label fx:id="label_price5" prefHeight="35.0" prefWidth="158.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <Label prefHeight="31.0" prefWidth="27.0" text="1" GridPane.rowIndex="1" />
+                        <Label prefHeight="35.0" prefWidth="33.0" text="2" GridPane.rowIndex="2" />
+                        <Label prefHeight="29.0" prefWidth="31.0" text="3" GridPane.rowIndex="3" />
+                        <Label prefHeight="36.0" prefWidth="39.0" text="4" GridPane.rowIndex="4" />
+                        <Label prefHeight="36.0" prefWidth="29.0" text="5" GridPane.rowIndex="5" />
+                        <Label prefHeight="36.0" prefWidth="33.0" text="S/N" />
+                     </children>
+                  </GridPane>
+                  <Button fx:id="btn_addItem" layoutX="6.0" layoutY="71.0" mnemonicParsing="false" onAction="#addItem" prefHeight="25.0" prefWidth="78.0" text="Add Item">
+                     <font>
+                        <Font name="Times New Roman Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_delete" layoutX="95.0" layoutY="72.0" mnemonicParsing="false" onAction="#deleteItem" prefHeight="25.0" prefWidth="78.0" text="Delete Item">
+                     <font>
+                        <Font name="Times New Roman Bold" size="10.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="375.0" layoutY="5.0" prefHeight="18.0" prefWidth="85.0" text="GRAND TOTAL" textFill="#eeebeb" />
+                  <Label fx:id="label_grandTotal" layoutX="375.0" layoutY="25.0" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: WHITE;" text="0" textAlignment="CENTER" />
+                  <Button fx:id="btn_sum" layoutX="188.0" layoutY="72.0" mnemonicParsing="false" onAction="#sum" prefHeight="25.0" prefWidth="78.0" text="SUM">
+                     <font>
+                        <Font name="Times New Roman Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_addNewItem" layoutX="189.0" layoutY="112.0" mnemonicParsing="false" onAction="#addNewItem" prefHeight="25.0" prefWidth="78.0" text="Add New Item">
+                     <font>
+                        <Font name="Times New Roman Bold" size="10.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="186.0" layoutY="2.0" text="QUANTITY" textFill="#fcfafa">
+                     <font>
+                        <Font name="Times New Roman" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="107.0" layoutY="2.0" text="PRICE(N)" textFill="#f8f4f4">
+                     <font>
+                        <Font name="Times New Roman" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="17.0" layoutY="2.0" text="ITEMS" textFill="#f2ecec">
+                     <font>
+                        <Font name="Times New Roman" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="295.0" layoutY="4.0" text="TOTAL" textFill="#eeebeb">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboBox_items" layoutX="7.0" layoutY="25.0" onAction="#selectItems" prefHeight="25.0" prefWidth="78.0" />
+                  <Label fx:id="label_price" layoutX="97.0" layoutY="25.0" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: WHITE;" text="0" />
+                  <Label fx:id="label_total" layoutX="282.0" layoutY="25.0" onInputMethodTextChanged="#addItem" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: WHITE;" text="0" textAlignment="CENTER" />
+                  <TextField fx:id="txt_quantity" layoutX="189.0" layoutY="25.0" onAction="#Quantity" prefHeight="25.0" prefWidth="78.0" promptText="0" />
+                  <Button layoutX="278.0" layoutY="71.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Print Receipt">
+                     <font>
+                        <Font name="Times New Roman" size="11.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txt_newItem" layoutX="7.0" layoutY="113.0" onAction="#newItem" prefHeight="25.0" prefWidth="78.0" promptText="New Item" />
+                  <TextField fx:id="txt_newPrice" layoutX="96.0" layoutY="112.0" prefHeight="25.0" prefWidth="78.0" promptText="Price" />
+                  <Button fx:id="btn_removeItem" layoutX="278.0" layoutY="112.0" mnemonicParsing="false" onAction="#removeItem" prefHeight="25.0" prefWidth="78.0" text="Remove Item">
+                     <font>
+                        <Font name="Times New Roman Bold" size="10.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="80.0" fitWidth="85.0" layoutX="373.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Pictures/Shopping%20Cart.jpg" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

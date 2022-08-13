@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="503.0" prefWidth="776.0" style="-fx-background-color: #1BADFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BillingController">
+   <center>
+      <BorderPane prefHeight="469.0" prefWidth="709.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" right="10.0" />
+         </BorderPane.margin>
+         <center>
+            <HBox alignment="CENTER" prefHeight="444.0" prefWidth="741.0" style="-fx-background-color: white;">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="426.0" prefWidth="338.0">
+                     <children>
+                        <GridPane alignment="CENTER" prefHeight="185.0" prefWidth="445.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="173.0" minWidth="10.0" prefWidth="103.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="136.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                              <RowConstraints />
+                           </rowConstraints>
+                           <children>
+                              <Label text="PRODUCT ID">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label contentDisplay="CENTER" prefHeight="24.0" prefWidth="104.0" text="NAME" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="idField" prefHeight="25.0" prefWidth="183.0" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="nameField" prefHeight="25.0" prefWidth="203.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <Label prefHeight="19.0" prefWidth="92.0" text="PRICE" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="QUANTITY" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="quantityField" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="priceField" prefHeight="25.0" prefWidth="199.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                           </children>
+                        </GridPane>
+                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="338.0">
+                           <children>
+                              <Button fx:id="addBtn" mnemonicParsing="false" onAction="#add" prefHeight="34.0" prefWidth="121.0" style="-fx-background-color: #1badff;" text="ADD TO BILL" textFill="#eef3f5">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="clearBtn" layoutX="114.0" layoutY="10.0" mnemonicParsing="false" onAction="#clear" prefHeight="34.0" prefWidth="84.0" style="-fx-background-color: #1badff;" text="CLEAR" textFill="#f2f4f5">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="16.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets right="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="426.0" prefWidth="564.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="21.0" prefWidth="620.0">
+                           <children>
+                              <Label text="PRODUCT LIST" textFill="#1badff">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="23.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="54.0" prefWidth="353.0">
+                           <children>
+                              <GridPane prefHeight="45.0" prefWidth="420.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints />
+                                </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="18.0" prefWidth="85.0" text="FILTER BY">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="14.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Label>
+                                    <ComboBox fx:id="filterBox" prefHeight="25.0" prefWidth="125.0" GridPane.columnIndex="1">
+                                       <GridPane.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </GridPane.margin>
+                                    </ComboBox>
+                                    <Button fx:id="filterBtn" mnemonicParsing="false" onAction="#filterAction" prefHeight="34.0" prefWidth="95.0" style="-fx-background-color: #1badff;" text="FILTER" textFill="#eef0f2" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="17.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets bottom="5.0" left="10.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                    <Button fx:id="refreshBtn1" mnemonicParsing="false" onAction="#refresh" prefHeight="34.0" prefWidth="95.0" style="-fx-background-color: #1badff;" text="REFRESH" textFill="#eef0f2" GridPane.columnIndex="3">
+                                       <font>
+                                          <Font name="Century Gothic Bold" size="17.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets left="10.0" />
+                                       </GridPane.margin>
+                                    </Button>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="table" editable="true" onMouseClicked="#mouseClick" prefHeight="195.0" prefWidth="445.0">
+                           <columns>
+                              <TableColumn fx:id="ID" prefWidth="46.0" text="ID" />
+                              <TableColumn fx:id="name" prefWidth="56.0" text="NAME" />
+                              <TableColumn fx:id="quantity" prefWidth="140.0" text="AVAILABLE QUANTITY" />
+                              <TableColumn fx:id="price" minWidth="0.0" prefWidth="59.0" text="PRICE" />
+                              <TableColumn fx:id="category" prefWidth="195.0" text="CATEGORY" />
+                           </columns>
+                           <opaqueInsets>
+                              <Insets left="5.0" />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets right="10.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <TextArea fx:id="txtArea" prefHeight="183.0" prefWidth="386.0">
+                           <VBox.margin>
+                              <Insets bottom="10.0" right="10.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" text="GRAND TOTAL: ">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="grandTotalField" alignment="CENTER" layoutX="229.0" layoutY="10.0" text="N">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Button fx:id="printBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#print" prefHeight="34.0" prefWidth="68.0" style="-fx-background-color: #1badff;" text="PRINT" textFill="#f9fbfc">
+                           <font>
+                              <Font name="Century Gothic Bold" size="17.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+         <effect>
+            <Glow />
+         </effect>
+         <top>
+            <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="BILLING POINT" textFill="#f4f7f8">
+                     <font>
+                        <Font name="Century Gothic Bold" size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="5.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+      </BorderPane>
+   </center>
+   <left>
+      <VBox alignment="CENTER" prefHeight="479.0" prefWidth="82.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label onMouseClicked="#logout" text="Logout" textFill="#f4f7f8">
+               <font>
+                  <Font name="Century Gothic Bold Italic" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </left>
+</BorderPane>
